@@ -4,8 +4,8 @@ class SignIn extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            signInEmail: 'default@gmail.com',
-            signInPassword: 'default',
+            signInEmail: '',
+            signInPassword: '',
         }
     }
     
@@ -47,7 +47,7 @@ class SignIn extends React.Component {
                             <label className="db fw6 lh-copy f6" htmlFor="email">Email</label>
                             <input 
                             className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
-                            type="text" name="email"  id="email"
+                            type="text" name="email"  id="email" value="default@gmail.com"
                             onChange={this.onEmailChange} 
                             />
                         </div>
@@ -55,11 +55,12 @@ class SignIn extends React.Component {
                                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
                                 <input 
                                 className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
-                                type="password" name="password"  id="password"
+                                type="password" name="password"  id="password" value="default"
                                 onChange={this.onPasswordChange}
                                 />
                             </div>
                         </fieldset>
+                        <p>(I've set a default email and password for easy signin.<br /> You can register a new user and sign in with that ID.)</p>
                         <div className="">
                         <input 
                             onClick={this.onSubmitSignIn}
